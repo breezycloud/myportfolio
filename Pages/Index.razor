@@ -1,0 +1,195 @@
+﻿@page "/"
+@layout LandingLayout
+
+<PageTitle>nerdyamin</PageTitle>
+<LandingSection SectionClass="top-section" BackgroundClass="sweet">
+    <ChildContent>        
+        <MudGrid Class="mb-16 mb-sm-0">
+            <MudItem Class="relative" xs="12" md="7" lg="6">
+                <MudText Typo="Typo.h1">Hi🙋‍♂️! I'm</MudText>
+                <MudText Typo="Typo.h1" Class="landing-h1-gradient">Aminu Aliyu </MudText>
+                <MudText Typo="Typo.h3">Full Software Engineer</MudText>
+                <div class="pl-1 my-4">
+                    <MudText Typo="Typo.subtitle1" Class="mud-text-secondary">
+                        I live by the mantra "Never stop learning"
+                    </MudText>
+                </div>
+                <div class="d-flex py-4 mb-16 mb-md-0">
+                    <MudButton Color="Color.Primary" Variant="Variant.Filled" DisableElevation="true" Class="mud-button-gradient-primary" Size="Size.Large" Href="/getting-started/installation">Hire Me</MudButton>
+                    @* <MudButton Color="Color.Default" Variant="Variant.Outlined" StartIcon="@Icons.Custom.Brands.GitHub" Size="Size.Large" Class="ms-4" Href="https://github.com/MudBlazor/MudBlazor/" Target="_blank">Star on GitHub</MudButton> *@
+                </div>
+                <div class="graphic-wrapper">
+                    <Browser/>
+                </div>
+            </MudItem>
+        </MudGrid>
+    </ChildContent>
+    <Stripes>
+        <div class="stripe gradient"></div>
+        <div class="stripe background"></div>
+    </Stripes>
+</LandingSection>
+
+<LandingSection Straight="true" Class="pt-5 pb-16">
+    <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-16">
+        Projects
+    </MudText>
+    <MudGrid Spacing="5" Justify="Justify.Center">
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-tertiary" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Typo="Typo.subtitle2">Laundry Management System</MudText>
+                    <MudText Typo="Typo.body2">Stack: VBA Access</MudText>
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>            
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">            
+            <MudPaper Class="pa-5 mud-theme-primary" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Assets Management System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Winforms C#</MudText>
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">            
+            <MudPaper Class="pa-5 mud-theme-info" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Inventory Management System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Winforms C#/Blazor Wasm</MudText>
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">                        
+            <MudPaper Class="pa-5 mud-theme-secondary" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Personnel Data System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Winforms C#/Blazor Wasm</MudText>
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-warning" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Attendance System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Winforms C#</MudText>                    
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-success" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">School Management System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Winforms C#</MudText>                    
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-dark" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Car Sales Management System</MudText>
+                    <MudText Typo="Typo.body2">Stack: Blazor Wasm C#</MudText>                    
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-success" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">Tailoring Sales System </MudText>
+                    <MudText Typo="Typo.body2">Stack: Blazor Wasm C#</MudText>                    
+                    <MudText Typo="Typo.body2">Status: 100% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-5 mud-theme-dark" Elevation="3">
+                <MudStack Spacing="1">
+                    <MudText Color="Color.Inherit" Typo="Typo.subtitle2">E-Commerce</MudText>
+                    <MudText Typo="Typo.body2">Stack: Blazor Wasm C#</MudText>                    
+                    <MudText Typo="Typo.body2">Status: 40% Completed </MudText>                    
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudText Align="Align.Center" Color="Color.Inherit" Typo="Typo.h5">Many More... </MudText>
+        </MudItem>
+    </MudGrid>
+</LandingSection>
+
+<LandingSection Straight="true" BackgroundClass="sweet">
+    <MudText Class="pa-5" Typo="Typo.h4" Align="Align.Center" Color="Color.Primary">About Me</MudText>
+    @* <MudText Typo="Typo.h5">Sandbox Global Services Limited</MudText> *@
+    <MudGrid Class="pa-5">
+        <MudItem xs="12" sm="6">            
+            <MudImage Src="about.png" Width="300" Height="300" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg"/>
+        </MudItem>  
+        <MudItem xs="12" sm="6">
+            <MudText Typo="Typo.subtitle1" Class="mud-text-secondary">
+                An enthusiastic individual who is eager to learn, and adaptable with a wide range of skills across different fields. Having experience in various programming languages and technologies has given me the knowledge of how they all come together to create something truly valuable, and interesting.
+            </MudText>
+        </MudItem>         
+    </MudGrid>    
+</LandingSection>
+<LandingSection Straight="true" BackgroundClass="sweet" Class="pt-5 pb-16">
+    <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-16">
+        Skills
+    </MudText>
+    <MudGrid Spacing="5" Justify="Justify.Center">
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Height="400" Class="pa-5 mud-theme-inherit" Elevation="3">
+                <MudStack Spacing="1" Justify="Justify.Center">
+                    <MudImage Src="csharp.png" Width="300" Height="300" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg pa-5"/>                    
+                </MudStack>
+            </MudPaper>            
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">            
+            <MudPaper Height="400" Class="pa-5 mud-theme-inherit" Elevation="3">
+                <MudStack Spacing="1" Justify="Justify.Center">
+                    <MudImage Src="sqlserver.jpg" Width="300" Height="300" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg pa-5"/>                    
+                </MudStack>
+            </MudPaper>            
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">            
+            <MudPaper Height="400" Class="pa-5 mud-theme-inherit" Elevation="3">
+                <MudStack Spacing="1" Justify="Justify.Center">
+                    <MudImage Src="postgresql.png" Width="300" Height="350" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg pa-5"/>                    
+                </MudStack>
+            </MudPaper>            
+        </MudItem>
+        @* <MudItem xs="12" sm="6" md="4">                        
+            <MudPaper Height="400" Class="pa-5 mud-theme-inherit" Elevation="3">
+                <MudStack Spacing="1" Justify="Justify.Center">
+                    <MudImage Src="csharp.png" Width="300" Height="300" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg pa-5"/>                    
+                </MudStack>
+            </MudPaper>            
+        </MudItem> *@
+    </MudGrid>
+</LandingSection>
+
+@code {    
+    private bool _showTestimonials { get; set; }
+
+    private void ToggleTestimonials()
+    {
+        _showTestimonials = !_showTestimonials;
+    }
+
+    private string GetTestimonialClass()
+    {
+        if (_showTestimonials)
+        {
+            return $"lp-testimonials";
+        }
+        else
+        {
+            return $"lp-testimonials hide-testimonials";
+        }
+    }
+
+}
