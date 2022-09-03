@@ -4,34 +4,24 @@ using myportfolio.Services;
 using MudBlazor;
 using MudBlazor.Services;
 using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using myportfolio;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddBlazoredLocalStorage();
-builder.Services.AddMudServices();
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<LayoutService>();
-builder.Services.AddScoped<IUserPreferencesService, UserPreferencesService>();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+public class Program
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
+        builder.RootComponents.Add<HeadOutlet>("head::after");
+
+        builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+        builder.Services.AddBlazoredLocalStorage();
+        builder.Services.AddMudServices();     
+        builder.Services.AddScoped<LayoutService>();
+        builder.Services.AddScoped<IUserPreferencesService, UserPreferencesService>();
+
+        await builder.Build().RunAsync();
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
-app.Run();
