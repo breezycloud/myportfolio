@@ -20,18 +20,17 @@ RUN apt-get update \
 RUN apt-get update
 RUN apt-get install -y python3
 
+
 WORKDIR /src
 RUN dotnet workload install wasm-tools
 COPY ["myportfolio.csproj", ""]
 RUN dotnet restore "./myportfolio.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "myportfolio.csproj" -c Release -o /app/build
-
-FROM build AS publish
 RUN dotnet publish "myportfolio.csproj" -c Release -o /app/publish
 
-FROM base AS final
+#final build
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 COPY --from=publish /app/publish .
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet myportfolio.dll
