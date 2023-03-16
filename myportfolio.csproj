@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="npm install" WorkingDirectory="npmJS" />
-    <Exec Command="npm run build" WorkingDirectory="npmJS" />
+    <Exec Command="npm install" WorkingDirectory="npmjS" />
+    <Exec Command="npm run build" WorkingDirectory="npmjS" />
   </Target>
 
 </Project>
