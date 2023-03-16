@@ -1,0 +1,20 @@
+{
+  "name": "npmjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack ./src/index.js --output-path ../wwwroot/js --output-filename index.bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@admob-plus/capacitor": "^1.24.0",
+    "@admob-plus/core": "^1.0.0-alpha.0"
+  }
+}
